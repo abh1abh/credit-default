@@ -1,0 +1,14 @@
+data/interim/
+data/processed/
+data/raw/
+
+
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.venv/
+.env
+
+.claude
+
+docs/
