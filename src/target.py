@@ -28,10 +28,11 @@ def add_target(df: pd.DataFrame) -> pd.DataFrame:
         df (pd.DataFrame): The input dataframe.
 
     Returns:
-        pd.DataFrame: The dataframe with the added target column.
+        pd.DataFrame: The dataframe with the added target column and removed loan_status column.
     """
     resolved = df.copy()
     resolved["target"] = (
         resolved["loan_status"].isin(["Charged Off", "Default"]).astype(int)
     )
+    resolved = resolved.drop(columns=["loan_status"])
     return resolved

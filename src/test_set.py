@@ -1,7 +1,9 @@
 import pandas as pd
 
 
-def get_test_set(df: pd.DataFrame, date: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+def get_test_train_set(
+    df: pd.DataFrame, date: str
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Get the test set from the dataframe.
 
